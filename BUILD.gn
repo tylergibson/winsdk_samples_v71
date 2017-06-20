@@ -111,5 +111,11 @@ if (is_win) {
       "//build/config/compiler:no_chromium_code",
       ":winsdk_samples_warnings_config",
     ]
+
+    if(is_winrt) {
+      configs -= [
+        "//build/config/win:target_winrt",
+      ]
+    }
   }
 }
